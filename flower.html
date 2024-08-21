@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Fresh Flowers Online">
+    <meta name="keywords" content="flower delivery, online flower shop, buy flowers online, fresh flowers, flower arrangements, same day delivery, roses, bouquets, floral gifts, send flowers, birthday flowers, wedding flowers, anniversary flowers, romantic flowers, flower shop">
+    <meta name="description" content="Explore our wide range of fresh flowers, bouquets, and floral arrangements for every occasion. Order online for same-day delivery and surprise your loved ones with beautiful flowers.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <title>Fresh Flowers Online</title>
+    <style>
+      body{
+        padding: 20px;
+      }
+      .l1{
+        margin-top: 20px;
+      }
+    
+.form-container {
+margin-top: 40px;
+  width: 20rem;
+  background: linear-gradient(#212121, #212121) padding-box,
+              linear-gradient(145deg, transparent 35%,#e81cff, #40c9ff) border-box;
+  border: 2px solid transparent;
+  padding: 32px 24px;
+  font-size: 14px;
+  font-family: inherit;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+  border-radius: 16px;
+  background-size: 200% 100%;
+  animation: gradient 5s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.form-container button:active {
+  scale: 0.95;
+}
+
+.form-container .form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-container .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.form-container .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #717171;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.form-container .form-group input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  color: #fff;
+  font-family: inherit;
+  background-color: transparent;
+  border: 1px solid #414141;
+}
+
+.form-container .form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  resize: none;
+  color: #fff;
+  height: 96px;
+  border: 1px solid #414141;
+  background-color: transparent;
+  font-family: inherit;
+}
+
+.form-container .form-group input::placeholder {
+  opacity: 0.5;
+}
+
+.form-container .form-group input:focus {
+  outline: none;
+  border-color: #e81cff;
+}
+
+.form-container .form-group textarea:focus {
+  outline: none;
+  border-color: #e81cff;
+}
+
+.form-container .form-submit-btn {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  align-self: flex-start;
+  font-family: inherit;
+  color: #717171;
+  font-weight: 600;
+  width: 40%;
+  background: #313131;
+  border: 1px solid #414141;
+  padding: 12px 16px;
+  font-size: inherit;
+  gap: 8px;
+  margin-top: 8px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.form-container .form-submit-btn:hover {
+  background-color: #fff;
+  border-color: #fff;
+}
+ 
+.form1 {
+  width: 22rem;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  transition: .4s ease-in-out;
+}
+
+.form1:hover {
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  scale: 0.99;
+}
+
+.heading {
+  position: relative;
+  text-align: center;
+  color: black;
+  top: 2em;
+  font-weight: bold;
+}
+
+.check {
+  position: relative;
+  align-self: center;
+  top: 4em;
+}
+
+.input {
+  position: relative;
+  width: 2.5em;
+  height: 2.5em;
+  margin: 1em;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background-color: rgb(235, 235, 235);
+  box-shadow: inset 3px 3px 6px #d1d1d1,
+            inset -3px -3px 6px #ffffff;
+  top: 6.5em;
+  left: 1.5em;
+  padding-left: 15px;
+  transition: .4s ease-in-out;
+}
+
+.input:hover {
+  box-shadow: inset 0px 0px 0px #d1d1d1,
+            inset 0px 0px 0px #ffffff;
+  background-color: lightgrey;
+}
+
+.input:focus {
+  box-shadow: inset 0px 0px 0px #d1d1d1,
+            inset 0px 0px 0px #ffffff;
+  background-color: lightgrey;
+}
+
+.btn1 {
+  position: relative;
+  top: 8.5em;
+  left: 2.4em;
+  width: 17em;
+  height: 3em;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  transition: .4s ease-in-out;
+  box-shadow: 1px 1px 3px #b5b5b5,
+             -1px -1px 3px #ffffff;
+}
+
+.btn1:active {
+  box-shadow: inset 3px 3px 6px #b5b5b5,
+            inset -3px -3px 6px #ffffff;
+}
+
+.btn2 {
+  position: relative;
+  top: 9.5em;
+  left: 2.4em;
+  width: 17em;
+  height: 3em;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  transition: .4s ease-in-out;
+  box-shadow: 1px 1px 3px #b5b5b5,
+             -1px -1px 3px #ffffff;
+}
+
+.btn2:active {
+  box-shadow: inset 3px 3px 6px #b5b5b5,
+            inset -3px -3px 6px #ffffff;
+}
+
+
+
+
+.login {
+  
+  width: 17rem;
+  margin: 10px;
+  height: 400px;
+  background: #2c2c2c;
+  padding: 47px;
+  padding-bottom: 57px;
+  color: #fff;
+  border-radius: 17px;
+  padding-bottom: 50px;
+  font-size: 1.3em;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.login input[type="text"],
+.login input[type="password"] {
+  opacity: 1;
+  display: block;
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 13px 18px;
+  margin: 20px 0 0 0;
+  font-size: 0.8em;
+  border-radius: 100px;
+  background: #3c3c3c;
+  color: #fff;
+}
+
+.login input:focus {
+  animation: bounce 1s;
+  -webkit-appearance: none;
+}
+
+.login input[type=submit],
+.login input[type=button],
+.h1 {
+  border: 0;
+  outline: 0;
+  width: 100%;
+  padding: 13px;
+  margin: 40px 0 0 0;
+  border-radius: 500px;
+  font-weight: 600;
+  animation: bounce2 1.6s;
+}
+
+.h1 {
+  padding: 0;
+  position: relative;
+  top: -35px;
+  display: block;
+  margin-bottom: -0px;
+  font-size: 1.3em;
+}
+
+.btn {
+  background: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+  color: #fff;
+  padding: 16px !important;
+}
+
+.btn:hover {
+  background: linear-gradient(144deg, #1e1e1e , 20%,#1e1e1e 50%,#1e1e1e );
+  color: rgb(255, 255, 255);
+  padding: 16px !important;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.login input[type=text] {
+  animation: bounce 1s;
+  -webkit-appearance: none;
+}
+
+.login input[type=password] {
+  animation: bounce1 1.3s;
+}
+
+.ui {
+  font-weight: bolder;
+  background: -webkit-linear-gradient(#B563FF, #535EFC, #0EC8EE);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-bottom: 4px solid transparent;
+  border-image: linear-gradient(0.25turn, #535EFC, #0EC8EE, #0EC8EE);
+  border-image-slice: 1;
+  display: inline;
+}
+
+@media only screen and (max-width: 600px) {
+  .login {
+    width: 70%;
+    padding: 3em;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-250px);
+    opacity: 0;
+  }
+}
+
+@keyframes bounce1 {
+  0% {
+    opacity: 0;
+  }
+
+  40% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+}
+
+@keyframes bounce2 {
+  0% {
+    opacity: 0;
+  }
+
+  70% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+}
+.l2{
+  border-radius: 20px;
+  border: rgb(210,59,185) 2px solid;
+box-shadow: radial-gradient(circle, rgba(210,59,185,1) 1%, rgba(139,35,182,1) 49%, rgba(75,142,255,1) 100%) 2px 2px 2px 2px;
+}
+.l3{
+  background: url(image/h.png);
+  opacity: 80%;
+  background-repeat: no-repeat;
+
+}
+footer {
+            background-color: #182028;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-family: sans-serif;
+        }
+
+        .social-links {
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin: 0 5px;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .social-links a:hover {
+            opacity: 0.8;
+        }
+
+        .copyright {
+            font-size: 14px;
+            opacity: 0.7;
+        }
+
+        .chat-bubble {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #2ecc71;
+            color: #fff;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .social-links {
+                display: block;
+                text-align: center;
+            }
+        }
+ 
+
+  
+    </style>
+</head>
+<body>
+    <nav class="navbar bg-dark fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand text-light" href="#"><img src="image/logo.png" alt="fresh flower online logo" width="60px"> 
+            Fresh Flowers Online
+        </a>
+          <button class="navbar-toggler bg-light " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon "></span>
+          </button>
+          <div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header ">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="image/logo.png" alt=" Fresh Flowers Online logo" width="60rem"> Fresh Flowers Online</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="#Bouquet">Bouquet</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#Vase">Vase</a>
+                  </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#advantage">Advantages</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#disadvantage">Disadvantages</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#Contact">Feedback</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#Sign">Sign Up</a>
+                  </li>
+                  </ul>
+              <form class="d-flex mt-3" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <br><br><br><br><br>
+      <center>
+      <div class="container row">
+        <div class="col-md-6">
+            <h1>Fresh Flower Online :</h1>
+            <hr class="text-danger" >
+            <br>
+            <p>Welcome to Fresh Flower Online, your one-stop destination for the freshest flowers online. We specialize in delivering vibrant and handpicked flowers straight from the garden to your doorstep. Whether you're celebrating a special occasion, expressing love, or simply brightening someone's day, our exquisite floral arrangements are crafted to make every moment memorable.
+
+            With a wide range of flowers to choose from, including roses, lilies, orchids, and seasonal blooms, we ensure that each bouquet is arranged with care and creativity. We pride ourselves on our commitment to quality, offering only the freshest flowers sourced from trusted growers.
+            
+            Shop with us for same-day delivery, easy online ordering, and exceptional customer service. Let us help you convey your emotions with the beauty of fresh flowers, making every occasion unforgettable.</p></div>
+        <div class="col-md-6">
+           
+            <img src="image/07BpIkbEsTNvA.png!sw800" alt="fresh flower online" width="350rem" >
+       
+        </div>
+      </div>
+      <br><br><br><br>
+<div class="container">
+    <div class="row" id="Bouquet">
+        <div class="col-md-12">
+            <h1>Bouquet</h1>
+            <hr class=" text-danger">
+            <br>
+            <p>
+                Are you looking for online flower bouquet delivery in Lahore or Karachi? We at House of Flowers provide gorgeous flower bouquets, made from a wide-ranging collection of fresh flowers. You can buy for your loved ones to make them happy on special occasions. Order online now!
+            </p>
+        </div>
+    </div>
+</div>
+<br><br><br>
+<div class="container">
+  <div class="row">
+      <div class="col-md-4"><div class="card" style="width: 18rem;height: 33rem;">
+<img src="image/dsa.png" class="card-img-top" alt="...">
+<div class="card-body">
+  <h5 class="card-title">Flower</h5>
+  <p class="card-text">Super Dad</p>
+  <a href="#"data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn btn-primary">3,799 PKR</a>
+</div>
+</div></div>
+      <div class="col-md-4"><div class="card" style="width: 18rem;">
+<img src="image/3.png" class="card-img-top" alt="...">
+<div class="card-body">
+  <h5 class="card-title">Flower</h5>
+  <p class="card-text">Garden Glory</p>
+  <a href="#"data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn btn-primary">4,500 PKR</a>
+</div>
+</div></div>
+      <div class="col-md-4"><div class="card" style="width: 18rem;height: 33rem;">
+<img src="image/2.png" class="card-img-top" alt="...">
+<div class="card-body">
+  <h5 class="card-title">Flower</h5>
+  <p class="card-text">Father Pride</p>
+  <a href="#"data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn btn-primary">6,599 PKR</a>
+</div>
+</div></div>
+  </div>
+</div>
+
+<br><br><br><br>
+<div class="container">
+    <div class="row" id="Vase">
+        <div class="col-md-4"><div class="card" style="width: 18rem; height: 33rem;">
+  <img src="image/flower-planters-golden-vase.png" class="card-img-top" alt="vase">
+  <div class="card-body">
+    <h5 class="card-title">Flower Vase</h5>
+    <p class="card-text">Golden Vase Set</p>
+    <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop"class="btn btn-primary">6,899 PKR</a>
+  </div>
+</div></div>
+        <div class="col-md-4"><div class="card" style="width: 18rem;height: 33rem;">
+  <img src="image/4.png" class="card-img-top" alt="vase">
+  <div class="card-body">
+    <h5 class="card-title">Flower Vase</h5>
+    <p class="card-text">Flower Vase</p>
+    <a href="#"data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn btn-primary">1,500 PKR </a>
+  </div>
+</div></div>
+        <div class="col-md-4"><div class="card" style="width: 18rem; height: 33rem;">
+  <img src="image/5.png" class="card-img-top" alt="vase">
+  <div class="card-body">
+    <h5 class="card-title">Flower Vase</h5>
+    <p class="card-text">Culturural Vase </p>
+    <a href="#"data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn btn-primary">1,799 PKR</a>
+  </div>
+</div></div>
+    </div>
+</div>
+<br><br><br>
+      <div class="container"id="advantage">
+        <div class="row" >
+            <div class="col-md-6">
+                <img src="image/pngtree-bunch-of-violet-flower-png-image_9199940.png" alt="flower" width="350rem">
+            </div>
+            <div class="col-md-6"  >
+<h1>Advantages</h1>
+<br>
+<p>
+    Garden flowers offer a range of benefits that go beyond their beauty. They create a serene and inviting atmosphere, transforming any space into a vibrant sanctuary. Flowers improve air quality by absorbing pollutants and releasing oxygen, making your environment healthier. They also attract pollinators like bees and butterflies, which are essential for a thriving ecosystem. Additionally, tending to garden flowers is a great way to reduce stress, promote relaxation, and connect with nature. Whether you're enhancing your home, boosting your mood, or supporting local wildlife, garden flowers are a simple yet powerful way to enrich your life.
+</p>
+            </div>
+        </div>
+      </div>
+      
+      <hr class="text-danger">
+      <br>
+      <div class="container">
+        <div class="row"id="disadvantage">
+            <div class="col-md-6">
+                <h1>Disadvantages</h1>
+                <p>
+
+While garden flowers add beauty and serenity to any space, they come with a few disadvantages. Maintaining a vibrant garden requires regular care, including watering, pruning, and protection from pests, which can be time-consuming and labor-intensive. Some flowers are also sensitive to climate and soil conditions, making them difficult to grow in certain environments. Additionally, garden flowers may attract insects and pests that can damage other plants or become a nuisance. Seasonal changes can lead to blooms fading, requiring replanting or seasonal adjustments. Despite these challenges, the rewards of a flourishing garden often outweigh the drawbacks for many enthusiasts.
+                </p>
+            </div>
+            <div class="col-md-6">
+                <img src="image/pngtree-withered-rose-flower-die-white-dried-photo-png-image_15212346.png" alt="flower" width="350rem">
+            </div>
+        </div>
+      </div>
+<div class="modal fade l1" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-dark">
+        <h1 class="modal-title fs-5 text-light" id="staticBackdropLabel"><img src="image/logo.png" alt=" Fresh Flowers Online logo" width="60rem"> Fresh Flowers Online</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img src="image/404.jpeg" alt="404" style="border-radius: 20px; border: red 2px solid; box-shadow: 10px   red;">
+        <br><br>
+        <h3>404 Error: Page Not Found</h3>
+        <br>
+        <p>
+Issue: Users encounter a "404 Error: Page Not Found" message when they attempt to access a specific page on the website. This error indicates that the server cannot find the requested page.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row bg-dark l2">
+    <div class="col-md-6">
+    
+      <div class="form-container" id="Contact">
+            <form class="form">
+              <div class="form-group">
+                <label for="email"> Email</label>
+                <input required="" name="email" id="email" type="text">
+              </div>
+              <div class="form-group">
+                <label for="textarea">Massege :</label>
+                <textarea required="" cols="50" rows="10" id="textarea" name="textarea">          </textarea>
+              </div>
+              <button type="submit" class="form-submit-btn" data-bs-toggle="modal" href="#exampleModalToggle">Submit</button>
+            </form>
+          </div>
+    </div>
+    <div class="col-md-6">
+     
+<div class="login wrap" id="Sign">
+  <div class="h1">Login</div>
+  <form action="" id="myForm">
+  <input pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$" placeholder="Email" id="email" name="email" type="text">
+  <input placeholder="Password" id="password" name="password" type="password">
+  <a href=""></a><input value="Login" class="btn" type="submit" >
+</form>
+</div>
+    </div>
+  </div>
+</div>
+
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    
+      <p>Check Your Email</p>
+     <center>
+      <form action="flower.html" target="_parent" class="form1">
+        <p class="heading">Verify</p>
+        <svg class="check" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="60px" height="60px" viewBox="0 0 60 60" xml:space="preserve">  <image id="image0" width="60" height="60" x="0" y="0" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAQAAACQ9RH5AAAABGdBTUEAALGPC/xhBQAAACBjSFJN
+      AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZ
+      cwAACxMAAAsTAQCanBgAAAAHdElNRQfnAg0NDzN/r+StAAACR0lEQVRYw+3Yy2sTURTH8W+bNgVf
+      aGhFaxNiAoJou3FVEUQE1yL031BEROjCnf4PLlxILZSGYncuiiC48AEKxghaNGiliAojiBWZNnNd
+      xDza3pl77jyCyPzO8ubcT85wmUkG0qT539In+MwgoxQoUqDAKDn2kSNLlp3AGi4uDt9xWOUTK3xg
+      hVU2wsIZSkxwnHHGKZOxHKfBe6rUqFGlTkPaVmKGn6iYao1ZyhK2zJfY0FZ9ldBzsbMKxZwZjn/e
+      5szGw6UsD5I0W6T+hBhjUjiF7bNInjz37Ruj3igGABjbtpIo3GIh30u4ww5wr3fwfJvNcFeznhBs
+      YgXw70TYX2bY/ulkZhWfzfBbTdtrzjPFsvFI+T/L35jhp5q2owDs51VIVvHYDM9sa/LY8XdtKy1l
+      FXfM8FVN2/X2ajctZxVXzPA5TZvHpfb6CFXxkerUWTOcY11LX9w0tc20inX2mmF4qG3upnNWrOKB
+      hIXLPu3dF1x+kRWq6ysHpkjDl+7eQjatYoOCDIZF3006U0unVSxIWTgTsI3HNP3soSJkFaflMDwL
+      3OoHrph9YsPCJJ5466DyOGUHY3Epg2rWloUxnMjsNw7aw3AhMjwVhgW4HYm9FZaFQZ/bp6QeMRQe
+      hhHehWKXGY7CAuSpW7MfKUZlAUqWdJ3DcbAAB3guZl9yKC4WYLfmT4muFtgVJwvQx7T2t0mnXK6J
+      XlGGyAQvfNkaJ5JBmxnipubJ5HKDbJJsM0eY38QucSx5tJWTVHBwqDDZOzRNmn87fwDoyM4J2hRz
+      NgAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMy0wMi0xM1QxMzoxNTo1MCswMDowMKC8JaoAAAAldEVY
+      dGRhdGU6bW9kaWZ5ADIwMjMtMDItMTNUMTM6MTU6NTArMDA6MDDR4Z0WAAAAKHRFWHRkYXRlOnRp
+      bWVzdGFtcAAyMDIzLTAyLTEzVDEzOjE1OjUxKzAwOjAwIIO3fQAAAABJRU5ErkJggg=="></image>
+      </svg>
+        <div class="box">
+        <input class="input" type="password" maxlength="1">
+        <input class="input" type="password" maxlength="1"> 
+        <input class="input" type="password" maxlength="1">
+        <input class="input" type="password" maxlength="1">
+        </div>
+        <button class="btn1">Submit</button>
+        <button class="btn2" aria-label="Close">Back</button>
+      </form>
+        </div>
+     </center>
+
+</div>
+<script>
+        
+  var modal = document.getElementById("myModal");
+
+
+  var form = document.getElementById("myForm");
+
+  var span = document.getElementsByClassName("close")[0];
+
+
+  form.onsubmit = function(event) {
+      event.preventDefault(); 
+      modal.style.display = "block";
+  }
+
+ 
+  span.onclick = function() {
+      modal.style.display = "none";
+  }
+
+ 
+  window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+  }
+</script>
+<div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel"><img src="image/logo.png" alt=" Fresh Flowers Online logo" width="60rem"> Fresh Flowers Online</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+       Submit Your Feedback &#128512;
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Next</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel2"><img src="image/logo.png" alt=" Fresh Flowers Online logo" width="60rem"> Fresh Flowers Online</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Thanks &#127804;
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary btn-close" style="width: 10rem;" data-bs-toggle="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<br><br>
+<div class="container " >
+  
+  <div class="row">
+    <div class="col-md-12">
+      <div class="l3" style="z-index: -1; border-radius: 20px;  height: 30rem; opacity: 40%; ">
+
+      </div>
+      <br>
+      <h1 style="z-index: 2;;background: white; text-align: center;  border-radius: 10px; position: relative; bottom: 30rem;">Leading Florists for Online Flower Deliveries in Pakistan</h1>
+      <br>
+      <p style="position: relative; bottom: 30rem;">We are a floral boutique offering online flower and gifts delivery in Pakistan. We provide free delivery in major towns and cities of Pakistan including but not limited to Karachi, Lahore, Islamabad, Rawalpindi, Faisalabad, Multan, Bahawalpur, Rahim yar khan, Hyderabad, Sukkur, Peshawar, Quetta, Sheikhupura, Gujranwala, Sialkot, Jhelum, Kharian, Gujrat, Mirpur, Gujjar Khan and Abbottabad. We create luxurious, floral arrangements and gifts for all occasions. Order online to wish your loved ones on their birthday, an anniversary, to congratulate, say thank you or to lift someone’s spirits in difficult times – Our team of florists are highly innovative and are experts in preparing lovely bouquets as well as floral arrangements in boxes & vases. We are able to offer great value for your money our professional team manages all tasks from taking the order, to the preparation of the bouquets to their delivery. We do not pass your order to the other local florists.
+
+        Real Flowers has an experienced team who understands how important the order is to you and are more than happy to go that extra mile to ensure that the presentation is great & the gifts reach the recipient that way you would want, nice & fresh!
+        
+        We know that when people send flowers, they may want to add something extra, so we have a range of delightful chocolate gift baskets, gourmet baskets, gift hampers, a range of cakes sourced from top tier bakeries as well as balloons to add that impact at the time of delivery! Many people from different countries, contact us for flower boxes and online vase arrangements in Pakistan.</p>
+    </div>
+    
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 style="text-align: center;">
+        Why People Choose Us
+      </h1>
+      <hr class="text-danger">
+      <br>
+      <p>
+       1. From receiving your order, to the preparation of the bouquets to delivery, everything is done by our professional & experienced team. We do not pass your order to other local florists; this gives us the power to offer quality products at very competitive prices.
+       <br>
+2. On-time delivery guaranteed <br>
+3. Hand delivery at the doorstep of the receiver. We are experts in delivering to all types of premises including residential, offices, hospitals, weddings/parties, hotels, restaurants, diplomatic embassies, etc.
+4. We don’t believe in scripts; every query is different and a fresh approach is needed. We love to talk with our customers and solving their queries gives us satisfaction and energy! We have a friendly customer services team that is always willing to go the extra mile in resolving whatever queries you may have. Customer service is fun at Real Flowers! <br>
+5. We are an ethical business and always deliver what is promised. Of course, due to the nature of the work we are in, it is sometimes inevitable to substitute which is done in accordance with our policy of using flowers of equal or higher value. <br>
+6. We have a wide range of flower bouquets available prepared from local as well as imported long stem roses, lilies, orchids, tuberoses, gladiolus, carnations, chrysanthemums, baby’s breath, etc.
+We offer services like weekly flower arrangements for offices & hotels as well as flower arrangements for engagements, weddings & corporate events. Same Day Flower Delivery!
+      </p>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <footer style="height: 20rem;">
+        <div class="social-links">
+            <a href="www.facebook.com"><i class="fab fa-facebook-f"><img src="image/Facebook-Logosu.png" alt="facebook" width="80rem"></i></a>
+            <a href="www.instagram.com"><i class="fab fa-instagram"><img src="image/Instagrаm-Logo.png" alt="instagram" width="80rem"></i></a>
+            <a href="www.twitter.com"><i class="fab fa-twitter"><img src="image/twitter-x-logo-0339F999CF-seeklogo.com.png" alt="twitter" width="50rem"></i></a>
+        </div>
+        <div class="copyright">
+            &copy; Fresh Flower Online By Konete
+        </div>
+    </footer>
+
+    <div class="chat-bubble">
+        <i class="fas fa-comment-dots"></i>
+    </div>
+
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit-id.js" crossorigin="anonymous"></script>
+    </div>
+  </div>
+</div>
+    </center>
+</body>
+</html>
